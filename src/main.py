@@ -1,4 +1,4 @@
-import src.imagesvision.image.gcp_integration
+import imagesvision.image.gcp_integration
 import logging
 
 logger=logging.getLogger(__name__)
@@ -6,7 +6,7 @@ logger=logging.getLogger(__name__)
 
 google_drive_auth()
 
-content=get_binary_image('C:/Users/Felip/OneDrive/Área de Trabalho/vision/images2/dog.jpg')
+content=get_binary_image('/home/osboxes/Downloads/dog.jpg')
 
 client = get_vision_instance(content)
 
