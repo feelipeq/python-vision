@@ -1,6 +1,7 @@
 import os
 import io
 import json
+from ast import literal_eval
 
 
 def get_tags_as_string(tags):
@@ -12,8 +13,24 @@ def get_tags_as_string(tags):
 
 def format_dict_response(path_image, labels, texts):
     response = {}
+    labels_dict={}
+    labels_dict_str=""
+    labels_list=[]
+    cont=0
+    for l in labels:
+        labels_dict=({'tagname' : str(l), 'label_score' : labels[l]})
+        if cont!=len(labels)-1:
+            labels_dict_str+=str(labels_dict)+','
+            labels_list.append(str(l))
+            cont+=1
+        else:
+            labels_dict_str+=str(labels_dict)
+            labels_list.append(str(l))
+
+    labels_dict=literal_eval(labels_dict_str)
     response.update({"caminho_imagem": path_image})
-    response.update({"tags": [labels]})
+    response.update({"tags": labels_dict})
+    response.update({"tag_list": labels_list})
     response.update({"texto": str(texts)})
     return response
 
@@ -31,6 +48,7 @@ def update_dict_with_response_time(response,vision_time,drive_time):
     return response
 
 def json_format_to_es(response, timestamp):
+    response.update({'timestamp' : timestamp })
     json_str = json.dumps(response, ensure_ascii=False, indent=4).encode('utf-8')
     json_str = json_str.decode()
     return json_str
