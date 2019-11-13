@@ -35,6 +35,7 @@ Stack
 ## Requirements
 
 - Python 3
+- Elasticsearch running on port localhost:9200
 
 ## Installing
 
@@ -77,11 +78,4 @@ run                 Starts the App
 
 ### Environment variables
 
-- DEBUG
-- DATABASES_DEFAULT_URI
-- DEFAULT_PRICING_CALL_CHARGE
-- DEFAULT_PRICING_TARIFF
-- DEFAULT_PRICING_BACKEND
-- DEFAULT_NOTIFICATION_BACKEND
-- DEFAULT_STORAGE_BACKEND
-- IS_ENABLE_TO_ENQUEUE_REPORT_BILL
+- GOOGLE_APPLICATION_CREDENTIALS
