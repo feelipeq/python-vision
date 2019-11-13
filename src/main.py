@@ -40,7 +40,7 @@ logger = logging.getLogger(__name__)
 extensions=['*.jpg','*.jpeg','*.png']
 search_folder="/home/osboxes/Pictures"
 folder_id='161pryZMzKGWawRZ2wV5qStfuK0R_OIcq'
-
+elastic = initiate_es()
 files=search_file_recursive(extensions,search_folder)
 
 for path_image in files:
@@ -69,9 +69,5 @@ for path_image in files:
     logger.info(response)
 
     timestamp=get_current_timestamp_formated()
-
     json_response=json_format_to_es(response,timestamp)
-    elastic = initiate_es()
     send_to_es(json_response,elastic)
-
-    #print(drive_service, file_name, path_image, folder_id, tags)
