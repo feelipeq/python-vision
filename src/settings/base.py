@@ -4,17 +4,10 @@ from . import constants
 PROJECT_PATH = os.path.dirname(os.path.dirname(__file__))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-<<<<<<< HEAD
 EXTENSIONS = ["*.jpg", "*.jpeg", "*.png"]
 FOLDER = "161pryZMzKGWawRZ2wV5qStfuK0R_OIcq"
 LANG = "pt-br"
-SECRET = "C:/Users/Felip/Downloads/Quickstart-09f65f8f8289.json"
-=======
-EXTENSIONS=['*.jpg','*.jpeg','*.png']
-FOLDER='161pryZMzKGWawRZ2wV5qStfuK0R_OIcq'
-LANG="pt-br"
-SECRET="imagesvision/secrets/client_secret.json"
->>>>>>> master
+SECRET = "imagesvision/secrets/client_secret.json"
 
 
 SIMPLE_SETTINGS = {"CONFIGURE_LOGGING": True}

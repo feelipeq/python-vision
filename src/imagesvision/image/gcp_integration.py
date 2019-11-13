@@ -5,21 +5,14 @@ from google.cloud import vision
 from google.cloud.vision import types
 
 import logging
-from pygdrive3.service import DriveService
+from pygdrive3 import service
 
 logger = logging.getLogger(__name__)
 
 
 def google_drive_auth():
     try:
-<<<<<<< HEAD
-        os.environ[
-            "GOOGLE_APPLICATION_CREDENTIALS"
-        ] = "C:/Users/Felip/Downloads/Quickstart-09f65f8f8289.json"
-        drive_service = DriveService("src/secrets/client_secrets.json")
-=======
-        drive_service = service.DriveService('src/secrets/client_secrets.json')
->>>>>>> master
+        drive_service = service.DriveService("src/secrets/client_secrets.json")
         drive_service.auth()
         logger.info("Autenticação com Sucesso")
     except Exception as e:

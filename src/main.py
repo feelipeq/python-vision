@@ -16,10 +16,12 @@ logger = logging.getLogger(__name__)
 
 content = get_binary_image("/home/osboxes/Downloads/dog.jpg")
 
-client = get_vision_instance(content)
+client = get_vision_instance()
 
 image = get_vision_object(content)
 
 labels = get_vision_labels(client, image)
 
 logger.info(labels, "a")
+
+print(labels)
