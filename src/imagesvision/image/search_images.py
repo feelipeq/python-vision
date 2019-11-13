@@ -1,11 +1,12 @@
 from pathlib import Path
 from simple_settings import settings
 
+
 def busca_imagens_recursivas():
-    arquivos=[]
-    
+    arquivos = []
+
     for ext in settings.extensions:
         for filename in Path(settings.folder).rglob(ext):
-            if filename != "" : 
+            if filename != "":
                 arquivos.append(filename)
     return arquivos
