@@ -1,0 +1,84 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Pycharm
+*.idea
+
+# Distribution / packaging
+.Python
+env/
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+include/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+.pytest_cache/
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log*
+*.pot
+celerybeat-schedule
+
+# Sphinx documentation
+docs/_build/
+
+# Git
+*.orig
+.DS_Store
+
+# Eclipse
+.settings
+.project
+.pydevproject
+
+# SQLite
+*.rdb
+*.db
+
+# Vagrant
+.vagrant
+
+# Sonar
+.sonar
+.pytest_cache
+.scannerwork
+sonar-scanner*
+
+# VSCode
+.vscode/settings.json
