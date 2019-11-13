@@ -1,3 +1,5 @@
+from datetime import datetime
+
 def get_execution_time():
     return 0
 

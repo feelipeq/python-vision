@@ -1,16 +1,15 @@
 from pathlib import Path
-from simple_settings import settings
 
 
-def search_file_recursive():
-    arquivos = []
+def search_file_recursive(extensions,folder):
+    files = []
 
-    for ext in settings.extensions:
-        for filename in Path(settings.folder).rglob(ext):
+    for ext in extensions:
+        for filename in Path(folder).rglob(ext):
             if filename != "":
-                arquivos.append(filename)
-    return arquivos
+                files.append(str(filename))
+    return files
 
 
 def get_filename(path_image):
-    return path_image.split('/')[-1]
+    return path_image.split('/')[-1].split('.')[0]

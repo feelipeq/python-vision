@@ -2,7 +2,6 @@ from google.cloud import vision
 from google.cloud.vision import types
 
 import logging
-from pygdrive3 import service
 
 logger = logging.getLogger(__name__)
 
