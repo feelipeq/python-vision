@@ -20,3 +20,6 @@ clean: ## Clean local environment
 
 format:
 	black .
+
+install:
+	pip install -r requirements.txt
