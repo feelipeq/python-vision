@@ -2,7 +2,7 @@ from pathlib import Path
 from simple_settings import settings
 
 
-def busca_imagens_recursivas():
+def search_file_recursive():
     arquivos = []
 
     for ext in settings.extensions:
@@ -10,3 +10,7 @@ def busca_imagens_recursivas():
             if filename != "":
                 arquivos.append(filename)
     return arquivos
+
+
+def get_filename(path_image):
+    return path_image.split('/')[-1]

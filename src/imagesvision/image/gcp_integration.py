@@ -34,12 +34,6 @@ def get_vision_text(client, image):
         logger.info("Textos gerados com sucesso")
         for text in texts:
             return text.description
-        #return texts
+        # return texts
     except Exception as e:
         logger.error("Erro na Integração com Vision: ", e)
-
-
-
-
-
-

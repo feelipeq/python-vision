@@ -7,7 +7,8 @@ else
 endif
 
 export PYTHONPATH=$(shell pwd)/src
-export GOOGLE_APPLICATION_CREDENTIALS=/home/osboxes/secrets/Quickstart-09f65f8f8289.json
+export GOOGLE_APPLICATION_CREDENTIALS=/home/osboxes/secrets/Quickstart-3b3e36c25fda.json
+
 
 
 

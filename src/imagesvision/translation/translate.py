@@ -8,9 +8,9 @@ def get_translation(word):
 
 
 def translate_google_labels(labels):
-    label_pt_br=""
-    labels_pt={}
+    label_pt_br = ""
+    labels_pt = {}
     for label in labels:
-        label_pt_br=translate(str(label.description),"pt-br","auto")
-        labels_pt.update({ label_pt_br : round(label.score,3) })
+        label_pt_br = translate(str(label.description), "pt-br", "auto")
+        labels_pt.update({label_pt_br: round(label.score, 3)})
     return labels_pt
