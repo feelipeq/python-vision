@@ -7,7 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXTENSIONS=['*.jpg','*.jpeg','*.png']
 FOLDER='161pryZMzKGWawRZ2wV5qStfuK0R_OIcq'
 LANG="pt-br"
-SECRET="C:/Users/Felip/Downloads/Quickstart-09f65f8f8289.json"
+SECRET="imagesvision/secrets/client_secret.json"
 
 
 SIMPLE_SETTINGS = {
