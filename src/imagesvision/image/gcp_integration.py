@@ -10,15 +10,6 @@ from pygdrive3 import service
 logger = logging.getLogger(__name__)
 
 
-def google_drive_auth():
-    try:
-        drive_service = service.DriveService("src/secrets/client_secrets.json")
-        drive_service.auth()
-        logger.info("Autenticação com Sucesso")
-    except Exception as e:
-        logger.error("Erro ao Autenticar no Drive: ", e)
-
-
 def get_vision_object(content):
     image = types.Image(content=content)
     return image

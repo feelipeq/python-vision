@@ -7,7 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXTENSIONS = ["*.jpg", "*.jpeg", "*.png"]
 FOLDER = "161pryZMzKGWawRZ2wV5qStfuK0R_OIcq"
 LANG = "pt-br"
-SECRET = "imagesvision/secrets/client_secret.json"
+DRIVE_SECRET = "/home/osboxes/secrets/client_secrets.json"
 
 
 SIMPLE_SETTINGS = {"CONFIGURE_LOGGING": True}

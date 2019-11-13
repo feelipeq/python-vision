@@ -6,7 +6,9 @@ else
 	export SIMPLE_SETTINGS=$(settings)
 endif
 
-export PYTHONPATH=$(shell pwd)/src/
+export PYTHONPATH=$(shell pwd)/src
+export GOOGLE_APPLICATION_CREDENTIALS=/home/osboxes/secrets/Quickstart-09f65f8f8289.json
+
 
 
 clean: ## Clean local environment
@@ -22,6 +24,7 @@ format:
 	black .
 
 install:
-	pip install -r requirements.txt
-export PYTHONPATH=$(shell pwd)/src
-export GOOGLE_APPLICATION_CREDENTIALS=$(PYTHONPATH)/secrets/Quickstart-09f65f8f8289.json
+	pip3 install -r requirements.txt
+
+run:
+	python3 $(PYTHONPATH)/main.py
