@@ -17,3 +17,6 @@ clean: ## Clean local environment
 	@rm -rf htmlcov/
 	@rm -f coverage.xml
 	@rm -f *.log
+
+format:
+	black .
