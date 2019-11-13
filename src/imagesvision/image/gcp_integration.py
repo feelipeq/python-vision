@@ -34,7 +34,9 @@ def get_vision_text(client, image):
         response = client.text_detection(image=image)
         texts = response.text_annotations
         logger.info("Textos gerados com sucesso")
-        return texts
+        for text in texts:
+            return text.description
+        #return texts
     except Exception as e:
         logger.error("Erro na Integração com Vision: ", e)
 
@@ -45,9 +47,4 @@ def get_binary_image(path_image):
     return content
 
 
-def get_tags_as_string(tags):
-    return 0
 
-
-def convert_struc_to_dict():
-    return 0
