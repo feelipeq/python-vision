@@ -12,7 +12,7 @@ from imagesvision.image.gcp_integration import (
 logger = logging.getLogger(__name__)
 
 
-google_drive_auth()
+#google_drive_auth()
 
 content = get_binary_image("/home/osboxes/Downloads/dog.jpg")
 

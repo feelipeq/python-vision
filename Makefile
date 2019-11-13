@@ -6,6 +6,7 @@ else
 	export SIMPLE_SETTINGS=$(settings)
 endif
 
+<<<<<<< HEAD
 export PYTHONPATH=$(shell pwd)/src/
 
 
@@ -23,3 +24,7 @@ format:
 
 install:
 	pip install -r requirements.txt
+=======
+export PYTHONPATH=$(shell pwd)/src
+export GOOGLE_APPLICATION_CREDENTIALS=$(PYTHONPATH)/secrets/Quickstart-09f65f8f8289.json
+>>>>>>> master
