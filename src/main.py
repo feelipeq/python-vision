@@ -1,7 +1,6 @@
 import logging
 
 from imagesvision.image.gcp_integration import (
-    get_binary_image,
     get_vision_instance,
     get_vision_object,
     get_vision_labels,
@@ -18,6 +17,7 @@ from imagesvision.translation.translate import (
 )
 
 from imagesvision.convert import (
+    get_binary_image,
     get_tags_as_string,
     format_dict_response
 )
@@ -29,7 +29,7 @@ logger = logging.getLogger(__name__)
 
 path_image="/home/osboxes/Downloads/dog.jpg"
 
-content = get_binary_image("/home/osboxes/Downloads/dog.jpg")
+content = get_binary_image(path_image)
 
 client = get_vision_instance()
 

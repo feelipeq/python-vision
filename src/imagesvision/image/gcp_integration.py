@@ -1,6 +1,3 @@
-import io
-import os
-
 from google.cloud import vision
 from google.cloud.vision import types
 
@@ -24,6 +21,7 @@ def get_vision_labels(client, image):
     try:
         response = client.label_detection(image=image)
         labels = response.label_annotations
+        logger.info("Labels gerados com sucesso")
         return labels
     except Exception as e:
         logger.error("Erro na Integração com Vision: ", e)
@@ -41,10 +39,7 @@ def get_vision_text(client, image):
         logger.error("Erro na Integração com Vision: ", e)
 
 
-def get_binary_image(path_image):
-    with io.open(path_image, "rb") as image_file:
-        content = image_file.read()
-    return content
+
 
 
 
